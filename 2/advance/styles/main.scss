@@ -1,0 +1,95 @@
+$color1: #2193b0;
+$color2: #6dd5ed;
+$radius: 0.5em;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, $color1, $color2);
+    .card {
+      width: 40%;
+      height: 40%;
+      border-radius: $radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 3em;
+      font-family: sans-serif;
+      &#a {
+        background-color: turquoise;
+      }
+      &#b {
+        background-color: aquamarine;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  $color1: #0f2027;
+  $color2: #2c5364;
+  $radius: 0.5em;
+
+  body .container {
+    background: linear-gradient(45deg, $color1, $color2);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  $duration: 0.4s;
+  body .container {
+    flex-direction: row;
+
+    .card {
+      width: 400px;
+      transition: transform 0.5s;
+      &#a,
+      &#b {
+        background-color: violet;
+        animation: color-change-reverse $duration;
+        animation-fill-mode: forwards;
+        &:hover {
+          transform: translateY(-40px);
+          animation: color-change $duration;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+
+  @keyframes color-change {
+    0% {
+      background-color: violet;
+    }
+    50% {
+      background-color: cyan;
+    }
+    100% {
+      background-color: teal;
+    }
+  }
+
+  @keyframes color-change-reverse {
+    0% {
+      background-color: teal;
+    }
+    50% {
+      background-color: cyan;
+    }
+    100% {
+      background-color: violet;
+    }
+  }
+}
