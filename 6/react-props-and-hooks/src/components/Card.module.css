@@ -1,0 +1,30 @@
+.dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1.25px solid white;
+  border-radius: 25px;
+  padding: 10px;
+  width: 60%;
+}
+
+.dark h1 {
+  margin: 0;
+}
+
+.isPrimary {
+  color: aqua;
+}
+
+.light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1.25px solid navy;
+  border-radius: 25px;
+  padding: 10px;
+  width: 60%;
+  color: navy;
+}
