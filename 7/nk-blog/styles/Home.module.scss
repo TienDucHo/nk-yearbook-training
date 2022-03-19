@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .title {
+      span {
+        color: #0749a0;
+      }
+    }
+    .navigators {
+      .link {
+        padding: 1rem;
+        border: 1.5px solid #2980f3;
+        border-radius: 16px;
+      }
+    }
+  }
+}
