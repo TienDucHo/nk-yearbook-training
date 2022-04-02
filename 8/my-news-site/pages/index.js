@@ -15,10 +15,12 @@ export default function Home({ feeds }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={homeStyles.main}>
-        {articles.map((elem, index) => (
-          <NewsCard key={index} news={elem} />
-        ))}
+      <main>
+        <div className={homeStyles.main}>
+          {articles.map((elem, index) => (
+            <NewsCard key={index} news={elem} />
+          ))}
+        </div>
       </main>
     </div>
   );
